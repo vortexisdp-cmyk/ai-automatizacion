@@ -259,11 +259,13 @@
             box-shadow: 0 10px 40px rgba(251, 191, 36, 0.1);
             border: 1px solid rgba(251, 191, 36, 0.2);
         ">
+                       <!-- ИСПРАВЛЕННАЯ ССЫЛКА НА КАРТИНКУ -->
             <img src="cover.png" alt="AIORO - AI Automation & OSINT" style="
-                width: 100%
+                width: 100%;
                 height: auto;
                 display: block;
-                object-fit: cover;
+                object-fit: contain; /* <-- ЗАМЕНИТЕ cover НА contain */
+                max-height: 500px;   /* <-- ДОБАВЬТЕ ЭТУ СТРОКУ, ЧТОБЫ КАРТИНКА НЕ БЫЛА ГИГАНТСКОЙ */
             ">
             
             <!-- Текстовый слой поверх картинки (для надежности) -->
