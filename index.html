@@ -93,11 +93,42 @@
             transition: all 0.3s; padding: 10px 20px; border-radius: 12px; background: rgba(251, 191, 36, 0.05);
             border: 1px solid rgba(251, 191, 36, 0.1);
         }
-        .link-item:hover { color: #fff; background: var(--text-gold); transform: translateY(-2px); border-color: var(--text-gold); box-shadow: 0 0 15px rgba(251, 191, 36, 0.4); }
-        .link-item svg { stroke: currentColor; }
-        .contra-link { border-color: var(--accent-green); color: var(--accent-green); background: rgba(5, 150, 105, 0.05); }
-        .contra-link:hover { background-color: var(--accent-green); color: #02040a; box-shadow: 0 0 20px rgba(5, 150, 105, 0.4); }
+        
+        .link-item {
+            color: var(--text-gold);
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex; /* <-- ИЗМЕНЕНО: было flex, стало inline-flex */
+            align-items: center;
+            justify-content: center; /* <-- ДОБАВЛЕНО: выравнивание по центру */
+            gap: 8px;
+            transition: all 0.3s;
+            padding: 10px 20px;
+            border-radius: 12px;
+            background: rgba(251, 191, 36, 0.05);
+            border: 1px solid rgba(251, 191, 36, 0.1);
+            white-space: nowrap; /* <-- ДОБАВЛЕНО: запрет переноса текста */
+        }
 
+        .link-item svg {
+            stroke: currentColor;
+            width: 20px; /* <-- ФИКСИРОВАННАЯ ШИРИНА */
+            height: 20px; /* <-- ФИКСИРОВАННАЯ ВЫСОТА */
+            flex-shrink: 0; /* <-- ЗАПРЕТ СЖАТИЯ ИКОНКИ */
+        }
+
+        .contra-link {
+            border-color: var(--accent-green);
+            color: var(--accent-green);
+            background: rgba(5, 150, 105, 0.05);
+        }
+        
+        .contra-link:hover {
+            background-color: var(--accent-green);
+            color: #02040a;
+            box-shadow: 0 0 20px rgba(5, 150, 105, 0.4);
+       
+       
         .lang-switch {
             margin-bottom: 40px; display: inline-flex; background: rgba(251, 191, 36, 0.05);
             padding: 5px; border-radius: 50px; border: 1px solid rgba(251, 191, 36, 0.1);
