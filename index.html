@@ -122,7 +122,11 @@
             height: 20px;
             flex-shrink: 0;
         }
-      
+         /* Универсальный элемент (виден всегда) */
+        .lang-universal {
+            display: inline-flex !important; 
+        }
+        
         /* CONTRA: Зеленая база + Золотое свечение при наведении */
         .contra-link {
             border-color: var(--accent-green);
@@ -135,11 +139,6 @@
             color: #02040a;
             border-color: var(--text-gold) !important; /* Золотая рамка */
             box-shadow: 0 0 20px rgba(251, 191, 36, 0.5), inset 0 0 10px rgba(251, 191, 36, 0.2); /* Золотое свечение */
-        }
-
-                /* Универсальный элемент (виден всегда) */
-        .lang-universal {
-            display: inline-flex !important; 
         }
 
         .lang-switch {
