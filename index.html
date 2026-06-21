@@ -127,18 +127,53 @@
         /* ЗАГОЛОВОК ПРОЦЕССА - ЗОЛОТОЙ */
         .process-section h2 { color: var(--text-gold-light); margin-bottom: 40px; font-size: 2rem; }
         .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
-        .process-step {
+               .process-step {
             background: var(--card-bg); 
-            padding: 30px 20px; 
             border-radius: 16px; 
             border: 1px solid rgba(251, 191, 36, 0.15);
-            transition: all 0.4s ease; position: relative;
+            transition: all 0.4s ease; 
+            position: relative;
+            
+            /* ДЕЛАЕМ КВАДРАТНЫМИ */
+            aspect-ratio: 1 / 1;       /* Принудительно квадратная форма */
+            display: flex;             /* Включаем флекс для центрирования */
+            flex-direction: column;    /* Вертикальное расположение */
+            justify-content: center;   /* Центрируем по вертикали */
+            align-items: center;       /* Центрируем по горизонтали */
+            text-align: center;        /* Текст по центру */
+            padding: 20px;             /* Отступы от краев */
         }
-        .process-step:hover { transform: translateY(-5px); border-color: var(--text-gold); }
-        .step-number { font-size: 2.5rem; font-weight: 800; color: rgba(251, 191, 36, 0.15); margin-bottom: 10px; line-height: 1; }
-        /* ЗАГОЛОВКИ ШАГОВ - ЗОЛОТЫЕ */
-        .process-step h3 { color: var(--text-gold-light); font-size: 1.1rem; margin-bottom: 10px; }
-        .process-step p { color: var(--text-white); opacity: 0.9; font-size: 0.95rem; line-height: 1.5; }
+
+        .process-step:hover { 
+            transform: translateY(-5px); 
+            border-color: var(--text-gold); 
+            box-shadow: 0 10px 30px rgba(251, 191, 36, 0.1);
+        }
+
+        /* Иконка сверху */
+        .step-icon {
+            width: 40px;               /* Чуть крупнее для квадрата */
+            height: 40px;
+            margin-bottom: 15px;
+            fill: var(--text-gold);
+            stroke: none;
+        }
+
+        /* Заголовок и текст адаптируются под центр */
+        .process-step h3 { 
+            color: var(--text-gold-light); 
+            font-size: 1.1rem; 
+            margin-bottom: 8px; 
+            margin-top: 0;
+        }
+        
+        .process-step p { 
+            color: var(--text-white); 
+            opacity: 0.9; 
+            font-size: 0.9rem; 
+            line-height: 1.4; 
+            margin: 0; 
+        }
 
         /* --- CTA SECTION (ТЕСТ-ДРАЙВ) --- */
         .cta-section {
