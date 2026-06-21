@@ -203,18 +203,21 @@
 
 
          /* --- ИКОНКИ В ШАГАХ ПРОЦЕССА --- */
-        .step-icon-left svg {
-            color: var(--text-gold); /* Золотой цвет */
+         .step-icon-left {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 1.5rem;
             opacity: 0.9;
-            width: 28px; /* Чуть крупнее эмодзи */
-            height: 28px;
-        }
-        
-        /* Убираем старые стили для эмодзи, если они были */
-        .step-icon-left {
-            font-size: 0; /* Скрываем текст эмодзи, если он остался */
         }
 
+        .step-icon-right {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            font-size: 1.2rem;
+            opacity: 0.7;
+        }
         /* Отступы для текста, чтобы он не наезжал на иконки */
         .process-step h3 {
             margin-top: 35px; 
@@ -345,30 +348,84 @@ referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
         <h2 data-lang="ru">Как мы работаем</h2>
         <h2 data-lang="pt">Como Trabalhamos</h2>
         
-        <div class="process-steps">
+         <div class="process-steps">
             <!-- Шаг 1: Сроки -->
             <div class="process-step" data-lang="ua" class="active">
-               <!-- Для блока 1 (Сроки) -->
-<div class="step-icon-left">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-</div>
+                <div class="step-icon-left">⏱️</div>
+                <h3>Термін роботи</h3>
+                <p>Від 1 до 7 днів залежно від обсягу роботи та складності.</p>
+                <div class="step-icon-right">📅</div>
+            </div>
+            <div class="process-step" data-lang="en">
+                <div class="step-icon-left">⏱️</div>
+                <h3>Working period</h3>
+                <p>From 1 to 7 days depending on the volume of work and complexity.</p>
+                <div class="step-icon-right">📅</div>
+            </div>
+            <div class="process-step" data-lang="ru">
+                <div class="step-icon-left">⏱️</div>
+                <h3>Сроки работ</h3>
+                <p>От 1 до 7 дней в зависимости от объема работы и сложности.</p>
+                <div class="step-icon-right">📅</div>
+            </div>
+            <div class="process-step" data-lang="pt">
+                <div class="step-icon-left">⏱️</div>
+                <h3>Prazos para o trabalho</h3>
+                <p>De 1 a 7 dias, dependendo do volume de trabalho e da complexidade.</p>
+                <div class="step-icon-right">📅</div>
+            </div>
 
-<!-- Для блока 2 (Разработка) -->
-<div class="step-icon-left">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-</div>
+            <!-- Шаг 2: Разработка -->
+            <div class="process-step" data-lang="ua" class="active">
+                <div class="step-icon-left">⏱️</div>
+                <h3>Розробка рішення</h3>
+                <p>Налаштовую процеси, пишу код або створюю продаючий контент під ваші цілі.</p>
+                <div class="step-icon-right">📅</div>
+            </div>
+            <div class="process-step" data-lang="en">
+                <div class="step-icon-left">⏱️</div>
+                <h3>Solution Development</h3>
+                <p>Setting up workflows, writing code, or creating persuasive content tailored to your goals.</p>
+                <div class="step-icon-right">📅</div>
+            </div>
+            <div class="process-step" data-lang="ru">
+                <div class="step-icon-left">⏱️</div>
+                <h3>Разработка решения</h3>
+                <p>Настраиваю процессы, пишу код или создаю продающий контент под ваши цели.</p>
+                <div class="step-icon-right">📅</div>
+            </div>
+            <div class="process-step" data-lang="pt">
+                <div class="step-icon-left">⏱️</div>
+                <h3>Desenvolvimento da Solução</h3>
+                <p>Configurando fluxos de trabalho, escrevendo código ou criando conteúdo persuasivo sob medida.</p>
+                <div class="step-icon-right">📅</div>
+            </div>
 
-<!-- Для блока 3 (Поддержка) -->
-<div class="step-icon-left">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-</div>
-
-    <div class="cta-section">
-        <div data-lang="ua" class="active"><h3>🛡️ Тест-драйв: ваша безпека</h3><p>Хочете дізнатися, що інтернет знає про вас? Напишіть «Аудит», і я зроблю швидкий ресерч вашого цифрового сліду.</p><a href="https://t.me/aioroarchitect?text=Привіт! Хочу замовити експрес-аудит" class="btn">Спробувати безкоштовно</a></div>
-        <div data-lang="en"><h3>🛡️ Test Drive: Your Security</h3><p>Want to know what the internet knows about you? Text "Audit" and I'll do a quick research of your digital footprint.</p><a href="https://t.me/aioroarchitect?text=Hi! I want to order an express audit" class="btn">Try for Free</a></div>
-        <div data-lang="ru"><h3>🛡️ Тест-драйв: ваша безопасность</h3><p>Хотите узнать, что интернет знает о вас? Напишите «Аудит», и я сделаю быстрый ресерч вашего цифрового следа.</p><a href="https://t.me/aioroarchitect?text=Привет! Хочу заказать экспресс-аудит" class="btn">Попробовать бесплатно</a></div>
-        <div data-lang="pt"><h3>🛡️ Test Drive: Sua Segurança</h3><p>Quer saber o que a internet sabe sobre você? Envie "Auditoria" e farei uma pesquisa rápida da sua pegada digital.</p><a href="https://t.me/aioroarchitect?text=Olá! Quero solicitar uma auditoria expressa" class="btn">Experimente Grátis</a></div>
-  </div>
+            <!-- Шаг 3: Поддержка -->
+            <div class="process-step" data-lang="ua" class="active">
+                <div class="step-icon-left">⏱️</div>
+                <h3>Підтримка</h3>
+                <p>Передаю інструкції та залишаюся на зв'язку для оперативних питань.</p>
+                <div class="step-icon-right">📅</div>
+            </div>
+            <div class="process-step" data-lang="en">
+                <div class="step-icon-left">⏱️</div>
+                <h3>Support</h3>
+                <p>Providing instructions and staying in touch for any operational questions.</p>
+                <div class="step-icon-right">📅</div>
+            </div>
+            <div class="process-step" data-lang="ru">
+                <div class="step-icon-left">⏱️</div>
+                <h3>Поддержка</h3>
+                <p>Передаю инструкции и остаюсь на связи для оперативных вопросов.</p>
+                <div class="step-icon-right">📅</div>
+            </div>
+            <div class="process-step" data-lang="pt">
+                <div class="step-icon-left">⏱️</div>
+                <h3>Suporte</h3>
+                <p>Fornecendo instruções e permanecendo em contato para quaisquer dúvidas operacionais.</p>
+                <div class="step-icon-right">📅</div>
+            </div>
         </div>
     </div>
 
