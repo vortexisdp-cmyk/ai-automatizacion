@@ -202,21 +202,17 @@
         @media (max-width: 480px) { .process-steps { grid-template-columns: 1fr; } .services { grid-template-columns: 1fr; } }
 
 
-             /* --- ИКОНКИ В ШАГАХ ПРОЦЕССА --- */
-        .step-icon-left {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            font-size: 1.5rem;
+         /* --- ИКОНКИ В ШАГАХ ПРОЦЕССА --- */
+        .step-icon-left svg {
+            color: var(--text-gold); /* Золотой цвет */
             opacity: 0.9;
+            width: 28px; /* Чуть крупнее эмодзи */
+            height: 28px;
         }
-
-        .step-icon-right {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            font-size: 1.2rem;
-            opacity: 0.7;
+        
+        /* Убираем старые стили для эмодзи, если они были */
+        .step-icon-left {
+            font-size: 0; /* Скрываем текст эмодзи, если он остался */
         }
 
         /* Отступы для текста, чтобы он не наезжал на иконки */
