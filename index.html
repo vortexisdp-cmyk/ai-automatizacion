@@ -392,12 +392,12 @@ referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
 <body>
     <div class="container">
         <!-- Language Switcher -->
-        <div class="lang-switcher">
-            <button class="lang-btn active" onclick="switchLang('ua')">UA</button>
-            <button class="lang-btn" onclick="switchLang('en')">EN</button>
-            <button class="lang-btn" onclick="switchLang('ru')">RU</button>
-            <button class="lang-btn" onclick="switchLang('pt')">PT</button>
-        </div>
+     <div class="lang-switcher">
+    <button class="lang-btn active" onclick="switchLang('ua')">UA</button>
+    <button class="lang-btn" onclick="switchLang('en')">EN</button>
+    <button class="lang-btn" onclick="switchLang('ru')">RU</button>
+    <button class="lang-btn" onclick="switchLang('pt')">BR</button>
+</div>
 
         <!-- Hero Image -->
         <div class="hero-image">
@@ -845,17 +845,36 @@ referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
         </div>
     </div>
 
-    <script>
+   <script>
         function switchLang(lang) {
             document.querySelectorAll('.lang-content').forEach(content => {
                 content.classList.remove('active');
             });
             document.getElementById(lang).classList.add('active');
+            
+            // Находим все кнопки и убираем активный класс
             document.querySelectorAll('.lang-btn').forEach(btn => {
                 btn.classList.remove('active');
             });
-            event.target.classList.add('active');
+            
+            // Переработанная логика поиска активной кнопки, чтобы автоопределение не падало на событии event
+            const activeBtn = Array.from(document.querySelectorAll('.lang-btn')).find(btn => {
+                return btn.getAttribute('onclick').includes(`'${lang}'`);
+            });
+            if (activeBtn) {
+                activeBtn.classList.add('active');
+            }
         }
+
+        // Автоопределение языка при загрузке страницы
+        window.addEventListener('DOMContentLoaded', () => {
+            const userLang = navigator.language || navigator.userLanguage;
+            
+            // Если язык системы пользователя начинается на "pt" (португальский)
+            if (userLang && userLang.toLowerCase().startsWith('pt')) {
+                switchLang('pt');
+            }
+        });
     </script>
 </body>
 </html>
